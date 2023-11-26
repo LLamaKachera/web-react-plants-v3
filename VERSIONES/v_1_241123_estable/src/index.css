@@ -1,0 +1,122 @@
+
+/*
+body {
+    margin: 0;
+    background: #ec8181;
+    font-family: system-ui;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+*/
+/*todo TITULO */
+/* Estilo del contenedor del título */
+.title-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Estilo del título principal */
+.main-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 4em;
+  color: #4CAF50; /* Verde suave */
+  margin-bottom: 10px;
+}
+
+/* Estilo del subtitulo */
+.subtitle {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  color: #bbed9a; /* Gris suave */
+}
+/*todo titulo */
+.ver{
+  border: 1px solid black;
+}
+.contenedor{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+/*todo superior */
+.Apli {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /*border: 2px solid black;*/
+  border: none;
+  padding: 20px;
+  gap: 20px;
+  /*height: 240px;*/
+  grid-column: 1 / -1;
+  justify-content: center;
+  align-content: center;
+
+}
+@media (width < 800px) {
+  .Apli{
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+}
+@media (width < 450px) {
+  .Apli{
+    grid-template-columns: 1fr 1fr;
+
+  }
+}
+/*? titulo medio*/
+.Apli2{
+  grid-column: span 4;
+  background: #3f8c42;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  color: #fcfcfc; /* Gris suave */
+  border-radius: 15px;
+  padding: 5px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/*todo desde APLI 3 EN ADELANTE*/
+.Apli3{
+  
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  color: #fcfcfc; /* Gris suave */
+  margin: 10px;
+}
+
+
+.Apli6{
+  display: grid;
+  grid-row: span 2;
+  place-content: center;
+  text-align: center;
+  border: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  color: #fcfcfc; /* Gris suave */
+  margin: 10px;
+ 
+}
+
+.Apli7{
+  background: lightblue;
+}
+.Apli8{
+  background: lightsalmon;
+}
+.Apli9{
+  background: #23a127;
+}
+
+
+
+

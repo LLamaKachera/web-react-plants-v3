@@ -1,0 +1,115 @@
+******************************
+App.css
+******************************
+.tw-followCard {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: .8rem;
+    justify-content: space-between;
+}
+
+.tw-followCard-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tw-followCard-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.tw-followCard-infoUserName {
+    opacity: .6;
+}
+
+.tw-followCard-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 1000px;
+}
+
+.tw-followCard-button {
+    margin-left: 16px;
+    border: 0;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: bold;
+}
+******************************
+App.jsx
+******************************
+import './App.css'
+import { TwitterFollowCard } from './TwitterFollowCard.jsx'
+//! continuar desde acá -- Poner respaldo de seguimiento .TXT
+export function App () {
+  return(
+    <section className='Apli'>
+      <TwitterFollowCard isFollowing={true} userName="llama" name="Llama"/>
+      <TwitterFollowCard isFollowing={false} userName="MrCat" name="White Cat"/>
+      <TwitterFollowCard isFollowing={true} userName="Dog" name="Perro Salchicha Jr"/>
+    </section>
+  )
+}
+******************************
+index.css
+******************************
+body {
+    margin: 0;
+    background: #222;
+    font-family: system-ui;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+.Apli {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+******************************
+main.jsx
+******************************
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+//! era de esta manera --> import App  from './App.jsx' - pero usar los corchetes
+import { App } from './App.jsx'
+//import './index.css'
+import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(
+  <App/>
+)
+
+******************************
+TwitterFollowCard.jsx
+******************************
+export function TwitterFollowCard ({userName, name, isFollowing}) {
+  const imageSrc = `https://unavatar.io/${userName}`
+  return(
+    <article className='tw-followCard'>
+      <header className='tw-followCard-header'>
+        <img 
+          className='tw-followCard-avatar'
+          alt="El avatar de una Llama" 
+          //todo Otra forma de usar es: src = {`https://unavatar.io/${userName}`}
+          src={imageSrc}/>
+        <div className='tw-followCard-info'>
+          <strong>{name}</strong>
+          <span className='tw-followCard-infoUserName'>
+            @{userName}
+          </span>
+        </div>
+      </header>
+
+      <aside>
+        <button className='tw-followCard-button'>
+          Seguir
+        </button>
+      </aside>
+    </article>
+  )
+}

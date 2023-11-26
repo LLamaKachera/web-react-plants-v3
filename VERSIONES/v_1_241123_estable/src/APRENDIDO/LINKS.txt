@@ -1,0 +1,6 @@
+1. 
+https://heroicons.com/
+    ==> paginas de iconos para usar
+2.
+https://unavatar.io/
+    ==> pagina para sacar imagenes, los links para el {{src}} de un IMG

@@ -1,0 +1,265 @@
+.etiquetaA-medio-super{
+  display: grid;
+  
+  /*?border: 2px solid #eee;*/
+  place-content: center;
+  border-radius: 10px;
+  /* ------ */
+  background: black;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  border-radius: 12px;
+  transition: filter 0.3s ease; 
+}
+.texto-medio-EA-super{
+  display: grid;
+  
+  /*?border: 2px solid #eee;*/
+  place-content: center;
+  border-radius: 10px;
+  /* ------ */
+  background: black;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  border-radius: 12px;
+  transition: filter 0.3s ease;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  color: #fcfcfc; /* Gris suave */
+}
+.etiquetaA-medio{
+  display: grid;
+  
+  /*?border: 2px solid #eee;*/
+  place-content: center;
+  border-radius: 10px;
+  /* ------ */
+  background: black;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  border-radius: 12px;
+  transition: filter 0.3s ease; 
+
+}
+.texto-medio-EA{
+  display: grid;
+  
+  /*?border: 2px solid #eee;*/
+  place-content: center;
+  border-radius: 10px;
+  /* ------ */
+  background: black;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  border-radius: 12px;
+  transition: filter 0.3s ease;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  color: #fcfcfc; /* Gris suave */
+  
+}
+.texto-medio-EA:hover {
+  background-color: #65f94b; /* Nuevo color al pasar el mouse sobre el div */
+  color: black;
+  font-size: 1.2em;
+}
+.etiquetaA{
+  display: grid;
+  
+  /*?border: 2px solid #eee;*/
+  place-content: center;
+  border-radius: 10px;
+  /* ------ */
+  background: black;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  border-radius: 12px;
+  transition: filter 0.3s ease; 
+
+}
+
+.etiquetaA:hover {
+  filter: contrast(200%);
+}
+.etiquetaA::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue );
+  background-size: 800%;
+  border-radius: 4px;
+  filter: blur(7px);
+  animation: glowing 20s linear infinite;
+}
+@keyframes glowing{
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 200% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
+.imagenSuperior{
+  width: 100px;
+  height: auto;
+  margin: 2px;
+  padding: 5px;
+}
+/*? imagen-medio*/
+.imagen-medio{
+
+  width: 300px;
+  height: auto;
+  border-radius: 20px 20px 0 0;
+  background-color: rgb(224 180 91);
+  padding: none;
+  filter: brightness(100%); /* Establece el brillo normal */
+  transition: filter 0.3s ease;
+
+
+}
+.imagen-medio:hover {
+  filter: brightness(70%); /* Reduce el brillo al pasar el mouse sobre la imagen */
+  
+}
+
+.texto-medio{
+  
+  display: grid;
+  width: 300px;
+  height: 70px;
+  border-radius: 0 0 20px 20px;
+  border: 0 0 0 30px;
+  padding: none;
+  /*?color: white;*/
+  background-color: #3f8c42;
+  place-content: center;
+  
+}
+.texto-medio-EA{
+  text-decoration: none;
+}
+.texto-medio:hover {
+  background-color: #65f94b; /* Nuevo color al pasar el mouse sobre el div */
+  color: black;
+  font-size: 1.2em;
+}
+
+/*? imagen-medio-duper */
+.imagen-medio-super{
+  width: 400px;
+  height: auto;
+  border-radius: 20px 20px 0 0;
+  background-color: #3f8c42;
+  padding: none;
+  filter: brightness(100%); /* Establece el brillo normal */
+  transition: filter 0.3s ease; /* Agrega una transición para suavizar el cambio */
+
+}
+.imagen-medio-super:hover {
+  filter: contrast(200%);
+}
+/*copy*/
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container {
+  display: inline-block;
+  position: relative;
+  line-height: 0;
+  /*?background: #ffffff;*/
+  
+}
+.image-container::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  mix-blend-mode: lighten;
+  background: #033dc5;
+  opacity: 1;
+}
+.image-container > img {
+  -webkit-filter:   contrast(120%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+          filter:   contrast(120%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+  mix-blend-mode: none;
+}
+
+/*copy*/
+@media(width<900px){
+  .imagen-medio-super{
+    width: 300px;
+  }
+}
+@media(width>1400px){
+  .imagen-medio-super{
+    width: 550px;
+  }
+}
+
+.texto-medio-super{
+  
+  display: grid;
+  width: 400px;
+  height: 70px;
+  border-radius: 0 0 20px 20px;
+  border: 0 0 0 30px;
+  padding: none;
+  color: white;
+  background-color: #3f8c42;
+  place-content: center;
+  transition: background-color 0.3s ease;
+  
+}
+.texto-medio-super:hover {
+  background-color: #65f94b; /* Nuevo color al pasar el mouse sobre el div */
+  color: black;
+  font-size: 3vh;
+}
+
+@media(width<900px){
+  .texto-medio-super{
+    width: 300px;
+  }
+}
+@media(width>1400px){
+  .texto-medio-super{
+    width: 550px;
+  }
+}
+
+.texto-medio-EA-super{
+  text-decoration: none;
+}
+/*todo contenedor super puesto*/
+
+
+
+
+
+
+
+
+/*? body*/
+
+
+
+
+body{
+  background: rgb(14, 11, 11);
+  /*cursor: url(Imagenes/puntero.png), auto;*/
+}
+/*a{  cursor: url(Imagenes/mano.png), auto;}*/

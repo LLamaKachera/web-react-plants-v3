@@ -1,0 +1,21 @@
+/* Estilo del contenedor del título */
+.title-container {
+text-align: center;
+margin-top: 50px;
+}
+
+/* Estilo del título principal */
+.main-title {
+font-family: 'Pacifico', cursive;
+font-size: 3em;
+color: #4CAF50; /* Verde suave */
+margin-bottom: 10px;
+}
+
+/* Estilo del subtitulo */
+.subtitle {
+font-family: 'Quicksand', sans-serif;
+font-size: 1.2em;
+color: #888; /* Gris suave */
+}
+  

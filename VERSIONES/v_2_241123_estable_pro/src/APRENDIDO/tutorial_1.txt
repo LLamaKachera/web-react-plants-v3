@@ -1,0 +1,105 @@
+
+EJEMPLO DE COMO HACER BOTONES EN REACT -->  
+
+****************************************
+I parte
+
+****************************************
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+//import App from './App.jsx'
+//import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(
+  <React.Fragment>
+    <button>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+      </svg>
+      boton 1
+    </button>
+    <button>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+      </svg>
+      boton num 2
+    </button>
+    <button>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+      </svg>
+      boton numero 3
+    </button>
+  </React.Fragment>  
+  
+)
+****************************************
+II parte - upgrade parte 1
+--------------------> Aunque esto funcione, no debería ser la manera.
+{{Aquí mostramos de manera imperativa}}
+****************************************
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+//import App from './App.jsx'
+//import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+const createButton = ({text}) =>{
+  return(
+    <button>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+      </svg>
+      {text}
+    </button>
+  )
+}  
+
+root.render(
+  <React.Fragment>
+    {createButton({ text: 'button 1'})}
+    {createButton({ text: 'button 2'})}
+    {createButton({ text: 'button 3'})}
+  
+  </React.Fragment>  
+  
+)
+****************************************
+III parte - upgrade parte 2
+--------------------> 
+****************************************
+///////\\\\\\\
+====> Usaremos el tipo: {{{PascalCase para los componentes}}} en REACT
+--> Otros tipos: {{camelCase; snake_case; kebab-case}}
+{{Aquí le diremos que queremos mostrar un boton}}
+----__->Aquí en lugar de crear funcinoes estamos creando componentes
+\\\\\\\\////////
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+//import App from './App.jsx'
+//import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+const Button = ({text}) =>{
+  return(
+    <button>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+      </svg>
+      {text}
+    </button>
+  )
+}  
+
+root.render(
+  <React.Fragment>
+    <Button text="button 1"/>
+    <Button text="button 2"/>
+    <Button text="button 3"/>
+  </React.Fragment>  
+  
+)
+
+
